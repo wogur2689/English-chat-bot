@@ -1,5 +1,9 @@
 # English-chat-bot
 AI 기반 채팅 봇(영어 공부용)
-2025-2월 시작
+stack : java Spring 3.0
 
-stack : java Spring 3점대 -> Django, FastAPI, Flask 중 하나로 변경
+# History
+기존 : 2025-2월 시작
+-> (2026-04-30) 심각한 본업이슈로 인해 2026-05 시작
+stack : java Spring 3.0
+-> (2026-04-30) 해당 프로젝트는 경량 프로젝트 이며, AI를 좀더 깊게 활용하고자 무거운 Spring 대신 Django / Flask 로 변경
