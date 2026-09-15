@@ -31,6 +31,7 @@ uvicorn app.main:app --reload
 
 서버 실행 후 다음 주소를 사용할 수 있습니다.
 
+- 채팅 화면: http://127.0.0.1:8000
 - API 문서: http://127.0.0.1:8000/docs
 - 상태 확인: http://127.0.0.1:8000/health
 - 채팅 API: `POST http://127.0.0.1:8000/api/v1/chat`

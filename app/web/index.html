@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="영어로 대화하고 자연스러운 표현을 연습하는 AI 영어 학습 챗봇"
+    />
+    <title>Fluent — English practice</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="학습 메뉴">
+        <a class="brand" href="/" aria-label="Fluent 홈">
+          <span class="brand-mark">F</span>
+          <span>fluent<span class="brand-dot">.</span></span>
+        </a>
+
+        <nav class="nav-list" aria-label="주요 메뉴">
+          <a class="nav-item active" href="#chat" aria-current="page">
+            <span class="nav-icon" aria-hidden="true">⌁</span> Practice
+          </a>
+          <a class="nav-item" href="#progress">
+            <span class="nav-icon" aria-hidden="true">↗</span> Progress
+          </a>
+          <a class="nav-item" href="#vocabulary">
+            <span class="nav-icon" aria-hidden="true">◇</span> Vocabulary
+          </a>
+        </nav>
+
+        <div class="streak-card">
+          <div class="streak-top">
+            <span class="eyebrow">THIS WEEK</span>
+            <span class="streak-count">3 day streak</span>
+          </div>
+          <div class="week-row" aria-label="이번 주 학습 현황">
+            <span class="day done">M</span>
+            <span class="day done">T</span>
+            <span class="day current">W</span>
+            <span class="day">T</span>
+            <span class="day">F</span>
+          </div>
+        </div>
+
+        <button class="profile" type="button">
+          <span class="avatar">JL</span>
+          <span><strong>Jay learner</strong><small>Intermediate</small></span>
+          <span class="profile-more" aria-hidden="true">•••</span>
+        </button>
+      </aside>
+
+      <main class="chat-page" id="chat">
+        <header class="topbar">
+          <button class="mobile-menu" type="button" aria-label="메뉴 열기">☰</button>
+          <div>
+            <span class="status-dot" aria-hidden="true"></span>
+            <span class="status-text">TUTOR ONLINE</span>
+          </div>
+          <button class="level-button" type="button" aria-label="현재 난이도: 중급">
+            Intermediate <span aria-hidden="true">⌄</span>
+          </button>
+        </header>
+
+        <section class="conversation" aria-label="영어 회화">
+          <div class="lesson-heading">
+            <span class="lesson-number">SESSION 04</span>
+            <h1>Let’s talk about your day.</h1>
+            <p>편하게 영어로 이야기해 보세요. 틀려도 괜찮아요.</p>
+          </div>
+
+          <div class="topic-row" aria-label="추천 대화 주제">
+            <button class="topic-chip" type="button" data-prompt="I had an interesting day at work.">
+              Work
+            </button>
+            <button class="topic-chip" type="button" data-prompt="Let me tell you about my weekend.">
+              Weekend
+            </button>
+            <button class="topic-chip" type="button" data-prompt="I want to talk about a movie I watched.">
+              Movies
+            </button>
+          </div>
+
+          <div class="messages" id="messages" aria-live="polite">
+            <article class="message-row tutor-message">
+              <div class="tutor-avatar" aria-hidden="true">F</div>
+              <div>
+                <span class="speaker">FLUENT TUTOR</span>
+                <div class="bubble tutor-bubble">
+                  <p>Hey! How has your day been so far?</p>
+                  <p class="translation">안녕하세요! 오늘 하루는 지금까지 어땠나요?</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="message-row user-message">
+              <div>
+                <span class="speaker">YOU</span>
+                <div class="bubble user-bubble">
+                  <p>It was pretty good. I met my friend and we drink coffee together.</p>
+                </div>
+                <div class="correction">
+                  <span class="correction-label">QUICK FIX</span>
+                  <p>“we <del>drink</del> <strong>drank</strong> coffee together.”</p>
+                  <small>과거에 일어난 일이므로 drink의 과거형인 drank가 자연스러워요.</small>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <form class="composer" id="chat-form">
+          <div class="composer-box">
+            <label class="sr-only" for="message-input">영어 메시지</label>
+            <textarea
+              id="message-input"
+              name="message"
+              rows="1"
+              maxlength="2000"
+              placeholder="Write something in English..."
+              required
+            ></textarea>
+            <div class="composer-actions">
+              <span class="input-hint"><kbd>Enter</kbd> to send · <kbd>Shift</kbd> + <kbd>Enter</kbd> for new line</span>
+              <button class="send-button" type="submit" aria-label="메시지 보내기">
+                <span>Send</span><span aria-hidden="true">↑</span>
+              </button>
+            </div>
+          </div>
+          <p class="disclaimer">AI가 제공한 교정은 정확하지 않을 수 있어요.</p>
+        </form>
+      </main>
+
+      <aside class="insight-panel" aria-label="오늘의 학습 정보">
+        <div class="insight-header">
+          <span class="eyebrow">TODAY'S FOCUS</span>
+          <strong>Past tense</strong>
+        </div>
+
+        <div class="score-ring" aria-label="오늘의 목표 68% 달성">
+          <div><strong>68</strong><span>%</span><small>DAILY GOAL</small></div>
+        </div>
+
+        <div class="metric-list">
+          <div class="metric"><span>Words spoken</span><strong>142</strong></div>
+          <div class="metric"><span>Corrections</span><strong>3</strong></div>
+          <div class="metric"><span>New expressions</span><strong>5</strong></div>
+        </div>
+
+        <blockquote class="phrase-card">
+          <span class="eyebrow">EXPRESSION OF THE DAY</span>
+          <p>“So far, so good.”</p>
+          <small>지금까지는 순조로워.</small>
+        </blockquote>
+      </aside>
+    </div>
+
+    <script src="/static/app.js" defer></script>
+  </body>
+</html>
