@@ -65,45 +65,18 @@
 
         <section class="conversation" aria-label="영어 회화">
           <div class="lesson-heading">
-            <span class="lesson-number">SESSION 04</span>
-            <h1>Let’s talk about your day.</h1>
-            <p>편하게 영어로 이야기해 보세요. 틀려도 괜찮아요.</p>
-          </div>
-
-          <div class="topic-row" aria-label="추천 대화 주제">
-            <button class="topic-chip" type="button" data-prompt="I had an interesting day at work.">
-              Work
-            </button>
-            <button class="topic-chip" type="button" data-prompt="Let me tell you about my weekend.">
-              Weekend
-            </button>
-            <button class="topic-chip" type="button" data-prompt="I want to talk about a movie I watched.">
-              Movies
-            </button>
+            <span class="lesson-number">DAILY ENGLISH</span>
+            <h1>오늘의 영어를 만나보세요.</h1>
+            <p>궁금한 영어 단어나 문장을 입력하면 바로 분석해 드려요.</p>
           </div>
 
           <div class="messages" id="messages" aria-live="polite">
-            <article class="message-row tutor-message">
+            <article class="message-row tutor-message" id="welcome-loading">
               <div class="tutor-avatar" aria-hidden="true">F</div>
               <div>
                 <span class="speaker">FLUENT TUTOR</span>
-                <div class="bubble tutor-bubble">
-                  <p>Hey! How has your day been so far?</p>
-                  <p class="translation">안녕하세요! 오늘 하루는 지금까지 어땠나요?</p>
-                </div>
-              </div>
-            </article>
-
-            <article class="message-row user-message">
-              <div>
-                <span class="speaker">YOU</span>
-                <div class="bubble user-bubble">
-                  <p>It was pretty good. I met my friend and we drink coffee together.</p>
-                </div>
-                <div class="correction">
-                  <span class="correction-label">QUICK FIX</span>
-                  <p>“we <del>drink</del> <strong>drank</strong> coffee together.”</p>
-                  <small>과거에 일어난 일이므로 drink의 과거형인 drank가 자연스러워요.</small>
+                <div class="bubble tutor-bubble" aria-label="오늘의 학습 내용을 불러오는 중">
+                  <span class="loading-dots" aria-hidden="true"><span></span><span></span><span></span></span>
                 </div>
               </div>
             </article>
@@ -118,7 +91,7 @@
               name="message"
               rows="1"
               maxlength="2000"
-              placeholder="Write something in English..."
+              placeholder="영어 단어나 문장을 입력해 보세요..."
               required
             ></textarea>
             <div class="composer-actions">
@@ -134,24 +107,19 @@
 
       <aside class="insight-panel" aria-label="오늘의 학습 정보">
         <div class="insight-header">
-          <span class="eyebrow">TODAY'S FOCUS</span>
-          <strong>Past tense</strong>
+          <span class="eyebrow">TODAY'S ENGLISH</span>
+          <strong>오늘의 학습</strong>
         </div>
 
-        <div class="score-ring" aria-label="오늘의 목표 68% 달성">
-          <div><strong>68</strong><span>%</span><small>DAILY GOAL</small></div>
+        <div class="daily-word-list" id="daily-word-list" aria-label="오늘의 단어">
+          <div class="side-loading"></div>
+          <div class="side-loading short"></div>
         </div>
 
-        <div class="metric-list">
-          <div class="metric"><span>Words spoken</span><strong>142</strong></div>
-          <div class="metric"><span>Corrections</span><strong>3</strong></div>
-          <div class="metric"><span>New expressions</span><strong>5</strong></div>
-        </div>
-
-        <blockquote class="phrase-card">
-          <span class="eyebrow">EXPRESSION OF THE DAY</span>
-          <p>“So far, so good.”</p>
-          <small>지금까지는 순조로워.</small>
+        <blockquote class="phrase-card" id="weekly-sentence">
+          <span class="eyebrow">THIS WEEK'S SENTENCE</span>
+          <p>불러오는 중...</p>
+          <small></small>
         </blockquote>
       </aside>
     </div>

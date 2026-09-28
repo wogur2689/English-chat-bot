@@ -6,5 +6,7 @@ class ChatRequest(BaseModel):
 
 
 class ChatResponse(BaseModel):
-    reply: str
-
+    original: str
+    ipa: str
+    pronunciation_ko: str
+    translation: str

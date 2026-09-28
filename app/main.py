@@ -6,7 +6,7 @@ from fastapi import FastAPI
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 
-from app.api.routes import chat, health
+from app.api.routes import chat, health, lesson
 from app.core.config import get_settings
 
 WEB_DIR = Path(__file__).parent / "web"
@@ -29,6 +29,7 @@ def create_app() -> FastAPI:
     application.mount("/static", StaticFiles(directory=WEB_DIR), name="static")
     application.include_router(health.router)
     application.include_router(chat.router, prefix="/api/v1")
+    application.include_router(lesson.router, prefix="/api/v1")
 
     @application.get("/", include_in_schema=False)
     async def web_app() -> FileResponse:

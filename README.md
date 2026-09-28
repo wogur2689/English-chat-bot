@@ -29,12 +29,20 @@ Copy-Item .env.example .env
 uvicorn app.main:app --reload
 ```
 
+`.env` 파일에 OpenAI API 키를 설정하면 영어 분석 기능을 사용할 수 있습니다.
+
+```dotenv
+OPENAI_API_KEY=your_api_key_here
+OPENAI_MODEL=gpt-4o-mini
+```
+
 서버 실행 후 다음 주소를 사용할 수 있습니다.
 
 - 채팅 화면: http://127.0.0.1:8000
 - API 문서: http://127.0.0.1:8000/docs
 - 상태 확인: http://127.0.0.1:8000/health
 - 채팅 API: `POST http://127.0.0.1:8000/api/v1/chat`
+- 오늘의 학습: `GET http://127.0.0.1:8000/api/v1/lesson/today`
 
 테스트 실행:
 

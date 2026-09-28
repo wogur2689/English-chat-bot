@@ -7,6 +7,8 @@ class Settings(BaseSettings):
     app_name: str = "English Chat Bot"
     app_env: str = "local"
     debug: bool = False
+    openai_api_key: str | None = None
+    openai_model: str = "gpt-4o-mini"
 
     model_config = SettingsConfigDict(env_file=".env", env_file_encoding="utf-8")
 
@@ -14,4 +16,3 @@ class Settings(BaseSettings):
 @lru_cache
 def get_settings() -> Settings:
     return Settings()
-
